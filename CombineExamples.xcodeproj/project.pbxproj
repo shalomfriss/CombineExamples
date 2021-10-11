@@ -26,6 +26,7 @@
 		44FB46002714C7C000E09D6C /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FF2714C7C000E09D6C /* PostsService.swift */; };
 		44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */; };
 		44FB46052714D95D00E09D6C /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46042714D95D00E09D6C /* Debugging.swift */; };
+		44FB46082714E1EF00E09D6C /* Timers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46072714E1EF00E09D6C /* Timers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		44FB45FF2714C7C000E09D6C /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerWrapper.swift; sourceTree = "<group>"; };
 		44FB46042714D95D00E09D6C /* Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
+		44FB46072714E1EF00E09D6C /* Timers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				44FB45FD2714C76E00E09D6C /* 2. Operators */,
 				44FB45FE2714C78200E09D6C /* 3. Networking */,
 				44FB46032714D92000E09D6C /* 4. Debugging */,
+				44FB46062714E1DF00E09D6C /* 5. Timers */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -207,6 +210,14 @@
 				44FB46042714D95D00E09D6C /* Debugging.swift */,
 			);
 			path = "4. Debugging";
+			sourceTree = "<group>";
+		};
+		44FB46062714E1DF00E09D6C /* 5. Timers */ = {
+			isa = PBXGroup;
+			children = (
+				44FB46072714E1EF00E09D6C /* Timers.swift */,
+			);
+			path = "5. Timers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +354,7 @@
 				44FB45F52714974D00E09D6C /* TransformationOperators.swift in Sources */,
 				44FB45F72714A7F600E09D6C /* FilteringOperators.swift in Sources */,
 				44FB45EF27148EA600E09D6C /* Subjects.swift in Sources */,
+				44FB46082714E1EF00E09D6C /* Timers.swift in Sources */,
 				44E4D6AE26CC8F2E00C8FAC4 /* AppDelegate.swift in Sources */,
 				44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */,
 				44FB45EB27148DA800E09D6C /* ListenToNotificationPublisher.swift in Sources */,

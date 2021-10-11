@@ -40,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let _ = CombiningOperators()
 //        let _ = SequenceOperators()
 //        let _ = Debugging()
-        
+        let _ = Timers()
         
     }
 
