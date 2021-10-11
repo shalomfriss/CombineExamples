@@ -26,19 +26,21 @@ struct School {
 
 
 class TransformationOperators {
+    var cancellable:AnyCancellable
+    
     init() {
         print("-------------------------------------------")
         print("CollectOperator")
         print("-------------------------------------------")
         
         //Collect items and return an array
-        let _ = ["A","B","C","D"].publisher.collect().sink {
+        cancellable = ["A","B","C","D"].publisher.collect().sink {
             print($0)
         }
         
         //You can chunk items into pieces
-        let _ = ["A","B","C","D"].publisher.collect(2).sink { print($0) }
-        let _ = ["A","B","C","D"].publisher.collect(3).sink { print($0) }
+        cancellable = ["A","B","C","D"].publisher.collect(2).sink { print($0) }
+        cancellable = ["A","B","C","D"].publisher.collect(3).sink { print($0) }
         
         
         print("-------------------------------------------")
@@ -49,31 +51,32 @@ class TransformationOperators {
         formatter.numberStyle = .spellOut
         
         //The map operator works just like in Swift
-        let _ = [123, 45, 67].publisher.map {
+        cancellable = [123, 45, 67].publisher.map {
             formatter.string(from: NSNumber(integerLiteral: $0)) ?? ""
         }.sink {
             print($0)
         }
         
         print("-------------------------------------------")
-        print("X KeyMap")
+        print("KeyMap")
         print("-------------------------------------------")
         //Map KeyPath
         let publisher = PassthroughSubject<Point, Never>()
-        let _ = publisher.map(\.x, \.y).sink {x, y in
+        cancellable = publisher.map(\.x, \.y).sink {x, y in
             print("x: \(x) - y: \(y)")
         }
         publisher.send(Point(x:2, y:10))
         
         print("-------------------------------------------")
-        print("X FlatMap")
+        print("FlatMap")
         print("-------------------------------------------")
 //        //Flatmap
         let citySchool = School(name: "City school", noOfStudents: 100)
         let school = CurrentValueSubject<School, Never>(citySchool)
-        let _ = school.sink {
+        cancellable = school.sink {
             print($0)
         }
+        
         //Nothing happens
         citySchool.noOfStudents.value += 1
         
@@ -81,22 +84,22 @@ class TransformationOperators {
         //Should fire event
         school.value = townSchool
         
-        
-        let _ = school.flatMap {
+        cancellable = school.flatMap {
             $0.noOfStudents
         }
         .sink {
             print($0)
         }
+        
         //Should fire another event
         citySchool.noOfStudents.value += 1
-        
+        citySchool.noOfStudents.value += 1
         
         print("-------------------------------------------")
         print("replaceNil")
         print("-------------------------------------------")
         
-        let _ = ["A","B",nil,"D"].publisher.replaceNil(with: "*").sink {
+        cancellable = ["A","B",nil,"D"].publisher.replaceNil(with: "*").sink {
             print($0)
         }
         
@@ -105,7 +108,7 @@ class TransformationOperators {
         print("-------------------------------------------")
         
         let empty = Empty<Int, Never>()
-        let _ = empty
+        cancellable = empty
             .replaceEmpty(with: 1)
             .sink(receiveCompletion: { print($0) }, receiveValue: { print($0) })
         
@@ -116,7 +119,7 @@ class TransformationOperators {
         //starts with an empty array, each call to the body of the function
         //gets an array and a value.  It then appends the value to the array.
         let numPublisher = (1...10).publisher
-        let _ = numPublisher.scan([]) { numbers, value -> [Int] in
+        cancellable = numPublisher.scan([]) { numbers, value -> [Int] in
             numbers + [value]
         }.sink { print($0) }
         

@@ -23,6 +23,8 @@
 		44FB45F72714A7F600E09D6C /* FilteringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45F62714A7F600E09D6C /* FilteringOperators.swift */; };
 		44FB45F92714ACC700E09D6C /* CombiningOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45F82714ACC700E09D6C /* CombiningOperators.swift */; };
 		44FB45FB2714C51400E09D6C /* SequenceOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FA2714C51400E09D6C /* SequenceOperators.swift */; };
+		44FB46002714C7C000E09D6C /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */; };
+		44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		44FB45F62714A7F600E09D6C /* FilteringOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringOperators.swift; sourceTree = "<group>"; };
 		44FB45F82714ACC700E09D6C /* CombiningOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiningOperators.swift; sourceTree = "<group>"; };
 		44FB45FA2714C51400E09D6C /* SequenceOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperators.swift; sourceTree = "<group>"; };
+		44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 		44FB45FE2714C78200E09D6C /* 3. Networking */ = {
 			isa = PBXGroup;
 			children = (
+				44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */,
+				44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */,
 			);
 			path = "3. Networking";
 			sourceTree = "<group>";
@@ -327,9 +333,11 @@
 				44FB45F72714A7F600E09D6C /* FilteringOperators.swift in Sources */,
 				44FB45EF27148EA600E09D6C /* Subjects.swift in Sources */,
 				44E4D6AE26CC8F2E00C8FAC4 /* AppDelegate.swift in Sources */,
+				44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */,
 				44FB45EB27148DA800E09D6C /* ListenToNotificationPublisher.swift in Sources */,
 				44FB45ED27148DD000E09D6C /* ImplementASubscriber.swift in Sources */,
 				44E4D6B026CC8F2E00C8FAC4 /* SceneDelegate.swift in Sources */,
+				44FB46002714C7C000E09D6C /* URLSessionExtensions.swift in Sources */,
 				44E4D6B226CC8F2E00C8FAC4 /* ContentView.swift in Sources */,
 				44FB45F92714ACC700E09D6C /* CombiningOperators.swift in Sources */,
 				44FB45F1271494DC00E09D6C /* TypeErasure.swift in Sources */,

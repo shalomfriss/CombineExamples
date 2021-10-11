@@ -7,12 +7,15 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    var anyPublisher:AnyPublisher<[Post], Error>?
+    var anyCancellable:AnyCancellable?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -35,7 +38,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let _ = TransformationOperators()
 //        let _ = FilteringOperators()
 //        let _ = CombiningOperators()
-        let _ = SequenceOperators()
+//        let _ = SequenceOperators()
+        
+//        let urlExt = URLSessionExtensions()
+//        anyPublisher = urlExt.getPosts()
+//        anyCancellable = anyPublisher?.sink(receiveCompletion: { _ in }, receiveValue: {
+//            print($0)
+//        })
         
     }
 
