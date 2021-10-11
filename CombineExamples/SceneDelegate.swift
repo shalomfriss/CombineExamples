@@ -28,6 +28,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        let _ = ListenToNotificationPublisher()
+        let _ = ImplementASubscriber()
+        let _ = Subjects()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

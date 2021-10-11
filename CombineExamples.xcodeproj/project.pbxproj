@@ -17,6 +17,7 @@
 		44E4D6D026CC8F3100C8FAC4 /* CombineExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4D6CF26CC8F3100C8FAC4 /* CombineExamplesUITests.swift */; };
 		44FB45EB27148DA800E09D6C /* ListenToNotificationPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45EA27148DA800E09D6C /* ListenToNotificationPublisher.swift */; };
 		44FB45ED27148DD000E09D6C /* ImplementASubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45EC27148DD000E09D6C /* ImplementASubscriber.swift */; };
+		44FB45EF27148EA600E09D6C /* Subjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45EE27148EA600E09D6C /* Subjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		44E4D6D126CC8F3100C8FAC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44FB45EA27148DA800E09D6C /* ListenToNotificationPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenToNotificationPublisher.swift; sourceTree = "<group>"; };
 		44FB45EC27148DD000E09D6C /* ImplementASubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementASubscriber.swift; sourceTree = "<group>"; };
+		44FB45EE27148EA600E09D6C /* Subjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				44FB45EA27148DA800E09D6C /* ListenToNotificationPublisher.swift */,
 				44FB45EC27148DD000E09D6C /* ImplementASubscriber.swift */,
+				44FB45EE27148EA600E09D6C /* Subjects.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FB45EF27148EA600E09D6C /* Subjects.swift in Sources */,
 				44E4D6AE26CC8F2E00C8FAC4 /* AppDelegate.swift in Sources */,
 				44FB45EB27148DA800E09D6C /* ListenToNotificationPublisher.swift in Sources */,
 				44FB45ED27148DD000E09D6C /* ImplementASubscriber.swift in Sources */,

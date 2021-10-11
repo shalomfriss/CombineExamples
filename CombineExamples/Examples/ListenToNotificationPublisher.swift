@@ -10,6 +10,9 @@ import Combine
 
 class ListenToNotificationPublisher {
     init() {
+        print("-------------------------------------------")
+        print("ListenToNotificationPublisher")
+        print("-------------------------------------------")
         let notification = Notification.Name("MyNotification")
         let publisher = NotificationCenter.default.publisher(for: notification, object: nil)
 

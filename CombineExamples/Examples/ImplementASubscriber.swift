@@ -10,6 +10,9 @@ import Combine
 
 class ImplementASubscriber {
     init() {
+        print("-------------------------------------------")
+        print("ImplementASubscriber")
+        print("-------------------------------------------")
         let publisher = ["A", "B", "C", "D", "E", "F", "G"].publisher
         let stringSubscriber = StringSubscriber()
         publisher.subscribe(stringSubscriber)
