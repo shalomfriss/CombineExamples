@@ -12,7 +12,7 @@ import Combine
 final class UITableViewControllerWrapper: UIViewControllerRepresentable {
     var anyPublisher:AnyPublisher<[Post], Error>?
     var anyCancellable:AnyCancellable?
-    var service:URLSessionExtensions = URLSessionExtensions()
+    var service:PostsService = PostsService()
     
     var posts:[Post] = [] {
         didSet {
@@ -58,47 +58,32 @@ final class UITableViewControllerWrapper: UIViewControllerRepresentable {
 }
 
 // MARK: - Coordinator
-    class Coordinator: NSObject, UITableViewDataSource, UITableViewDelegate {
+class Coordinator: NSObject, UITableViewDataSource, UITableViewDelegate {
 
-        // MARK: Properties and initializer
-        private let parent: UITableViewControllerWrapper
+    // MARK: Properties and initializer
+    private let parent: UITableViewControllerWrapper
 
-        init(_ parent: UITableViewControllerWrapper) {
-            self.parent = parent
-        }
-
-        // MARK: UITableViewDelegate and DataSource methods
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return parent.posts.count
-        }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            return createPostCell(indexPath, tableView)
-        }
-
-        // MARK: - Private helpers
-        fileprivate func createPostCell(_ indexPath: IndexPath, _ tableView: UITableView) -> UITableViewCell {
-            //let comment = parent.comments[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DebugCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "DebugCell")
-
-            cell.textLabel!.numberOfLines = 0
-            cell.textLabel!.lineBreakMode = .byCharWrapping
-            cell.textLabel!.text = parent.posts[indexPath.row].title
-            return cell
-        }
-        
-        
-        //        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //            UITableView.automaticDimension
-        //        }
-
-        //        var cellHeights = [IndexPath: CGFloat]()
-
-        //        func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        //            cellHeights[indexPath] = cell.frame.size.height
-        //        }
-
-        //        func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        //            return cellHeights[indexPath] ?? UITableView.automaticDimension
-        //        }
+    init(_ parent: UITableViewControllerWrapper) {
+        self.parent = parent
     }
+
+    // MARK: UITableViewDelegate and DataSource methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return parent.posts.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return createPostCell(indexPath, tableView)
+    }
+
+    // MARK: - Private helpers
+    fileprivate func createPostCell(_ indexPath: IndexPath, _ tableView: UITableView) -> UITableViewCell {
+        //let comment = parent.comments[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DebugCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "DebugCell")
+
+        cell.textLabel!.numberOfLines = 0
+        cell.textLabel!.lineBreakMode = .byCharWrapping
+        cell.textLabel!.text = parent.posts[indexPath.row].title
+        return cell
+    }
+}

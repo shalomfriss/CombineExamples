@@ -23,8 +23,9 @@
 		44FB45F72714A7F600E09D6C /* FilteringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45F62714A7F600E09D6C /* FilteringOperators.swift */; };
 		44FB45F92714ACC700E09D6C /* CombiningOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45F82714ACC700E09D6C /* CombiningOperators.swift */; };
 		44FB45FB2714C51400E09D6C /* SequenceOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FA2714C51400E09D6C /* SequenceOperators.swift */; };
-		44FB46002714C7C000E09D6C /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */; };
+		44FB46002714C7C000E09D6C /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB45FF2714C7C000E09D6C /* PostsService.swift */; };
 		44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */; };
+		44FB46052714D95D00E09D6C /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB46042714D95D00E09D6C /* Debugging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +68,9 @@
 		44FB45F62714A7F600E09D6C /* FilteringOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringOperators.swift; sourceTree = "<group>"; };
 		44FB45F82714ACC700E09D6C /* CombiningOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiningOperators.swift; sourceTree = "<group>"; };
 		44FB45FA2714C51400E09D6C /* SequenceOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperators.swift; sourceTree = "<group>"; };
-		44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
+		44FB45FF2714C7C000E09D6C /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerWrapper.swift; sourceTree = "<group>"; };
+		44FB46042714D95D00E09D6C /* Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				44FB45FC2714C75F00E09D6C /* 1. Basics */,
 				44FB45FD2714C76E00E09D6C /* 2. Operators */,
 				44FB45FE2714C78200E09D6C /* 3. Networking */,
+				44FB46032714D92000E09D6C /* 4. Debugging */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -192,10 +195,18 @@
 		44FB45FE2714C78200E09D6C /* 3. Networking */ = {
 			isa = PBXGroup;
 			children = (
-				44FB45FF2714C7C000E09D6C /* URLSessionExtensions.swift */,
+				44FB45FF2714C7C000E09D6C /* PostsService.swift */,
 				44FB46012714D33800E09D6C /* UITableViewControllerWrapper.swift */,
 			);
 			path = "3. Networking";
+			sourceTree = "<group>";
+		};
+		44FB46032714D92000E09D6C /* 4. Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				44FB46042714D95D00E09D6C /* Debugging.swift */,
+			);
+			path = "4. Debugging";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,8 +347,9 @@
 				44FB46022714D33800E09D6C /* UITableViewControllerWrapper.swift in Sources */,
 				44FB45EB27148DA800E09D6C /* ListenToNotificationPublisher.swift in Sources */,
 				44FB45ED27148DD000E09D6C /* ImplementASubscriber.swift in Sources */,
+				44FB46052714D95D00E09D6C /* Debugging.swift in Sources */,
 				44E4D6B026CC8F2E00C8FAC4 /* SceneDelegate.swift in Sources */,
-				44FB46002714C7C000E09D6C /* URLSessionExtensions.swift in Sources */,
+				44FB46002714C7C000E09D6C /* PostsService.swift in Sources */,
 				44E4D6B226CC8F2E00C8FAC4 /* ContentView.swift in Sources */,
 				44FB45F92714ACC700E09D6C /* CombiningOperators.swift in Sources */,
 				44FB45F1271494DC00E09D6C /* TypeErasure.swift in Sources */,

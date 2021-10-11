@@ -14,7 +14,7 @@ struct Post: Codable {
     let body: String
 }
 
-class URLSessionExtensions {
+class PostsService {
     init() {}
     
     func getPosts() -> AnyPublisher<[Post], Error> {

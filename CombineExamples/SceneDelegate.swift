@@ -39,12 +39,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let _ = FilteringOperators()
 //        let _ = CombiningOperators()
 //        let _ = SequenceOperators()
+//        let _ = Debugging()
         
-//        let urlExt = URLSessionExtensions()
-//        anyPublisher = urlExt.getPosts()
-//        anyCancellable = anyPublisher?.sink(receiveCompletion: { _ in }, receiveValue: {
-//            print($0)
-//        })
         
     }
 
