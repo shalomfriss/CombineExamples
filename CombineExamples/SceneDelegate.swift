@@ -29,9 +29,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
         
-        let _ = ListenToNotificationPublisher()
-        let _ = ImplementASubscriber()
-        let _ = Subjects()
+//        let _ = ListenToNotificationPublisher()
+//        let _ = ImplementASubscriber()
+//        let _ = Subjects()
+//        let _ = TransformationOperators()
+//        let _ = FilteringOperators()
+        let _ = CombiningOperators()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

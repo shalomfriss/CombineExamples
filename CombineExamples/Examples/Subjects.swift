@@ -19,7 +19,23 @@ class Subjects {
         let subscriber = StringSubscriber2()
         let subject = PassthroughSubject<String, MyError>()
         subject.subscribe(subscriber)
+        
+        //Have to save a reference to the subscription or it will be released automatically
+        //and you will get no values
+        let subscription = subject.sink(receiveCompletion: { (completion) in
+            print("Completion from sink")
+        }) { value in
+            print("Value from sink", value)
+        }
+        
         subject.send("A")
+        subscription.cancel()
+        subject.send("B")
+        subject.send("C")
+        subject.send("D")
+        
+        
+        
     }
     
 }
