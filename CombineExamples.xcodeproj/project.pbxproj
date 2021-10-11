@@ -156,16 +156,40 @@
 		44FB45E927148D7B00E09D6C /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				44FB45FC2714C75F00E09D6C /* 1. Basics */,
+				44FB45FD2714C76E00E09D6C /* 2. Operators */,
+				44FB45FE2714C78200E09D6C /* 3. Networking */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		44FB45FC2714C75F00E09D6C /* 1. Basics */ = {
+			isa = PBXGroup;
+			children = (
 				44FB45EA27148DA800E09D6C /* ListenToNotificationPublisher.swift */,
 				44FB45EC27148DD000E09D6C /* ImplementASubscriber.swift */,
 				44FB45EE27148EA600E09D6C /* Subjects.swift */,
 				44FB45F0271494DC00E09D6C /* TypeErasure.swift */,
+			);
+			path = "1. Basics";
+			sourceTree = "<group>";
+		};
+		44FB45FD2714C76E00E09D6C /* 2. Operators */ = {
+			isa = PBXGroup;
+			children = (
 				44FB45F42714974D00E09D6C /* TransformationOperators.swift */,
 				44FB45F62714A7F600E09D6C /* FilteringOperators.swift */,
 				44FB45F82714ACC700E09D6C /* CombiningOperators.swift */,
 				44FB45FA2714C51400E09D6C /* SequenceOperators.swift */,
 			);
-			path = Examples;
+			path = "2. Operators";
+			sourceTree = "<group>";
+		};
+		44FB45FE2714C78200E09D6C /* 3. Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "3. Networking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

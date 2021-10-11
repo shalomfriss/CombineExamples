@@ -34,7 +34,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let _ = Subjects()
 //        let _ = TransformationOperators()
 //        let _ = FilteringOperators()
-        let _ = CombiningOperators()
+//        let _ = CombiningOperators()
+        let _ = SequenceOperators()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
