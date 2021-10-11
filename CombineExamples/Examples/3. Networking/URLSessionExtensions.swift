@@ -24,6 +24,7 @@ class URLSessionExtensions {
         
         return URLSession.shared.dataTaskPublisher(for: url).map { $0.data }
         .decode(type: [Post].self, decoder: JSONDecoder())
+        .receive(on: RunLoop.main)
         .eraseToAnyPublisher()
     }
 }
