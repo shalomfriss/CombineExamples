@@ -34,8 +34,6 @@ class Subjects {
         subject.send("C")
         subject.send("D")
         
-        
-        
     }
     
 }
